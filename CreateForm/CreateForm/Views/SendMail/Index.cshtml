@@ -1,0 +1,23 @@
+﻿@model CreateForm.Models.ContactModel
+
+@{
+    ViewBag.Title = "Contact Form Demo";
+}
+
+<h2>Send a contact form demo in ASP.NET MVC</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Form</legend>
+
+        @Html.EditorForModel()
+
+        <input type="submit" value="Gửi" />
+
+    </fieldset>
+
+}
