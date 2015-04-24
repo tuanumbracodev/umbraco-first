@@ -1,6 +1,6 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using System.Web
 @using System.Web.Optimization
-
 @{
     Layout = null;
     var _currentsite = @CurrentPage.Site();
@@ -10,7 +10,8 @@
 <html>
 <head>
 	@{ Html.RenderPartial("_headPV"); }
-    @Styles.R
+@*    <link href="@Scripts.Url("~/bundles/css")" rel="stylesheet">*@
+    @Styles.Render("~/bundles/css")
 </head>
 <body>
 
@@ -18,7 +19,11 @@
     @RenderBody()
 
 <p>Umbraco base installed.</p>
+    @Scripts.Render("~/bundles/CDN")
+    @Scripts.Render("~/bundles/scripts")
 
+@*    <script src="@System.Web.Optimization.Scripts.Url("~/bundles/scripts")" type="text/javascript"></script>
 
+    <script src='@Scripts.Url("~/bundles/scripts")' async> </script>*@
 </body>
 </html>

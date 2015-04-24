@@ -24,16 +24,16 @@
         msg.To.Add(Request.Form["txtEmail"]);
 
         smtpClient.Send(msg);
-        
-        ViewBag.Demo = "Send OK";
+
+        ViewBag.Demo = "<p class='warning'>Send OK</p>";
     }
 }
 else
 {
-    ViewBag.Demo = "No postback!";
+    ViewBag.Demo = "<p class='warning'>No postback!</p>";
 }
 
-@ViewBag.Demo
+@Html.Raw(ViewBag.Demo)
 
 <h2>Contact</h2>
 
