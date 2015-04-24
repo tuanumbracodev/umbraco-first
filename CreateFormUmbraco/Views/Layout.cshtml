@@ -1,4 +1,6 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using System.Web.Optimization
+
 @{
     Layout = null;
     var _currentsite = @CurrentPage.Site();
@@ -8,7 +10,7 @@
 <html>
 <head>
 	@{ Html.RenderPartial("_headPV"); }
-    @Styles.Render("")
+    @Styles.R
 </head>
 <body>
 
