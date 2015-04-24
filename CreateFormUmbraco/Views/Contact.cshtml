@@ -1,0 +1,117 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@using System.Text;
+@using System.Net;
+@using System.Net.Mail;
+@{
+    Layout = "Layout.cshtml";
+    ViewBag.Demo = string.Empty;
+}
+
+@if(IsPost)
+{
+    using (var smtpClient = new SmtpClient())
+    {
+        var msg = new MailMessage
+        {
+            IsBodyHtml = true,
+            BodyEncoding = Encoding.UTF8,
+            Subject = Request.Form["txtSubject"],
+            Body = "Dear " + Request.Form["txtName"] + ",<br/>" + Request.Form["txtMessage"],
+            Priority = MailPriority.Normal,
+        };
+
+        msg.To.Add(Request.Form["txtEmail"]);
+
+        smtpClient.Send(msg);
+        
+        ViewBag.Demo = "Send OK";
+    }
+}
+else
+{
+    ViewBag.Demo = "No postback!";
+}
+
+@ViewBag.Demo
+
+<h2>Contact</h2>
+
+<form id="frmContact" method="post" name="">
+    <fieldset>
+        <legend>Form</legend>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>@Html.TextBox("txtName")</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>@Html.TextBox("txtEmail")</td>
+            </tr>
+            <tr>
+                <td>Subject</td>
+                <td>@Html.TextBox("txtSubject")</td>
+            </tr>
+            <tr>
+                <td>Message</td>
+                <td>@Html.TextArea("txtMessage")</td>
+            </tr>
+        </table>
+        <input id="btnSubmit" type="submit" value="Submit" onclick="CheckValueInput()"/>
+        <script type="text/javascript">
+            //$(document).ready(function () {
+            //    if (checkEmail("nguyenminhtuanitc@gmail"))
+            //        alert("ok");
+            //    else
+            //        alert("no ok");
+            //});
+            function checkEmail(email) {
+
+                var filter = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+
+                if (!filter.test(email)) {
+
+                    alert('Please enter the value in format \'mymail@domain.com\'.');
+
+                    return false;
+                }
+                return true;
+            }
+            function CheckValueInput() {
+                var name = document.getElementById("txtName").value;
+                if (name == null || name == "") {
+                    alert("Please input some value into 'Name'.");
+                    return false;
+                }
+                var email = document.getElementById("txtEmail").value;
+                if (email == null || email == "") {
+                    alert("Please input some value into 'Email'.");
+                    return false;
+                }
+                else {
+                    if (!checkEmail(email))
+                        return false;
+                }
+                var subject = document.getElementById("txtSubject").value;
+                if (subject == null || subject == "") {
+                    alert("Please input some value into 'Submit'.");
+                    return false;
+                }
+                var message = document.getElementById("txtMessage").value;
+                if (message == null || message == "") {
+                    alert("Please input some value into 'Message'.");
+                    return false;
+                }
+                else {
+                    if (message.length < 4) {
+                        alert("Please input value more 3 char into 'Message'.");
+                        return false;
+                    }
+                }
+
+            }
+            document.getElementById("btnSubmit").setAttribute("onclick", "return CheckValueInput()");
+        </script>
+    </fieldset>
+</form>

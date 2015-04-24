@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+    var _currentsite = @CurrentPage.Site();
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	@{ Html.RenderPartial("_headPV"); }
+    @Styles.Render("")
+</head>
+<body>
+
+
+    @RenderBody()
+
+<p>Umbraco base installed.</p>
+
+
+</body>
+</html>

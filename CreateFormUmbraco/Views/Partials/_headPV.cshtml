@@ -1,0 +1,8 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@if(@Umbraco.Field("pageTitle").ToString() == ""){	<title>Default</title>	}	else	{	<title>@Umbraco.Field("pageTitle")</title>	}
+	
+@if(@Umbraco.Field("metaDescription").ToString() == ""){	<meta name="description" content="" />	} 	else	{	<meta name="description" content="@Umbraco.Field("metaDescription").ToString()" />	}
+
+@if(@Umbraco.Field("metaKeywords").ToString() == ""){	<meta name="keywords" content="" />	}	else	{	<meta name="keywords" content="@Umbraco.Field("metaKeywords").ToString()" />	}
+
