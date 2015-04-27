@@ -1,0 +1,580 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+	@{ Html.RenderPartial("_headPV");  }
+</head>
+<body>
+	
+	
+		
+	
+	<div id="mobile-nav">
+		<a href="#" id="mobile-nav-close">Close</a>
+				
+		<ul id="mobile-nav-items">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="the-goring.html">The Goring</a></li>
+			<li><a href="our-offers.html">Our Offers</a></li>
+			<li class="current"><a href="our-suites.html">Our Suites</a></li>
+				<ul>
+					<li><a href="#">Junior Suites</li>
+					<li><a href="belgravia-suite.html">Belgravia Suite</li>
+					<li><a href="#">The Royal Suite</li>
+				</ul>
+			<li><a href="our-rooms.html">Our Rooms</a></li>
+			<li><a href="location.html">Location</a></li>
+			<li><a href="dining.html">Dining</a></li>
+			<li><a href="events.html">Events</a></li>
+		</ul>
+
+		
+		<div id="mobile-footer-left-nav">
+			<ul>
+				<li><a href="#">Hotel Brochure</a></li>
+				<li><a href="#">Newsletter</a></li>
+				<li><a href="#">Media Hub</a></li>
+				<li><a href="#">Awards</a></li>
+			</ul>
+		</div>
+			
+			
+		<div id="mobile-footer-right-nav">
+			<ul>
+				<li><a href="#">Travel Professionals</a></li>
+				<li><a href="#">Groups</a></li>
+				<li><a href="#">Careers</a></li>
+				<li><a href="#">Villa Iduzkia</a></li>
+			</ul>
+		</div>
+		
+		
+		<div id="mobile-icons-social">
+			<ul>
+				<li><a target="_blank" href="#"><img src="/images/icon-google.png" /></a></li>
+				<li><a target="_blank" href="#"><img src="/images/icon-linkedin.png" /></a></li>
+				<li><a target="_blank" href="#"><img src="/images/icon-facebook.png" /></a></li>
+				<li><a target="_blank" href="#"><img src="/images/icon-tripadvisor.png" /></a></li>
+				<li><a target="_blank" href="#"><img src="/images/icon-twitter.png" /></a></li>
+			</ul>
+		</div>
+	</div><!-- /#mobile-nav -->
+			
+			
+			
+	
+	
+	<div id="wrapper">
+		
+		<div id="header">
+    		
+    		<a href="#" id="mobile-nav-open">Open</a>
+    		
+			<div id="mobile-check-avail">
+				
+				<div id="mobile-check-avail-toggle">Book <span>a</span> stay</div>
+				
+				<div id="mobile-check-avail-form">
+					
+					<form action="https://gc.synxis.com/rez.aspx" method="get" target="_blank">
+						<input type="hidden" name="Hotel" value="15601" />
+						<input type="hidden" name="Chain" value="6386" />
+						<input type="hidden" name="locale" value="en-gb" />
+						<input type="hidden" name="start" value="availresults" />
+						<input type="hidden" name="adult" value="2" />
+						
+						<input type="text" id="mobile-arrive" name="arrive" readonly="readonly" />
+						<input type="text" id="mobile-depart" name="depart" readonly="readonly" />
+						
+						<div class="mobile-check-avail-button">
+							<input type="submit" id="mobile-check-avail-submit" value="Check Availability" />
+						</div>
+						
+						<div class="mobile-check-avail-button">
+							<a href="#">Make an enquiry</a>
+						</div>
+						
+						<p>Call our team: +44 (0) 20 7396 90005</p>
+						
+					</form>
+					
+				</div>
+				
+			</div><!-- /#mobile-check-avail -->
+
+		
+			<div id="logo">
+				<a href="index.html"><img src="/images/logo.jpg" alt="The Goring" /></a>
+			</div>
+			
+			
+			<div id="nav-container">
+				
+				<div id="primary-nav-container">
+					<ul id="primary-nav">
+						<li><a href="index.html">Home</a></li>
+						<li>
+							<a href="the-goring.html">The Goring</a>
+							<div class="megamenu cf">
+								<div class="megamenu-image">
+									<img src="/images/megamenu-image.jpg" alt="" />
+								</div>
+								<ul class="megamenu-items">
+									<li><a href="#">Delightful Queen-bedded Room</a></li>
+									<li><a href="#">Delightful King or Twin-bedded Room </a></li>
+									<li><a href="#">Deluxe King or Twin-bedded Room </a></li>
+									<li><a href="#">Splendid Rooms</a></li>
+									<li><a href="#">Most Splendid Rooms</a></li>
+								</ul>
+								<ul class="megamenu-items right">
+									<li><a href="#">Book a stay</a></li>
+									<li><a href="#">Make an enquiry</a></li>
+									<li class="megamenu-offers-link"><a href="#">See all our latest offers</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="our-offers.html">Our Offers</a>
+							<div class="megamenu cf">
+								<div class="megamenu-image">
+									<img src="/images/megamenu-image.jpg" alt="" />
+								</div>
+								<ul class="megamenu-items">
+									<li><a href="#">Delightful Queen-bedded Room</a></li>
+									<li><a href="#">Delightful King or Twin-bedded Room </a></li>
+									<li><a href="#">Deluxe King or Twin-bedded Room </a></li>
+									<li><a href="#">Splendid Rooms</a></li>
+									<li><a href="#">Most Splendid Rooms</a></li>
+								</ul>
+								<ul class="megamenu-items right">
+									<li><a href="#">Book a stay</a></li>
+									<li><a href="#">Make an enquiry</a></li>
+									<li class="megamenu-offers-link"><a href="#">See all our latest offers</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="our-suites.html">Our Suites</a>
+							<div class="megamenu cf">
+								<div class="megamenu-image">
+									<img src="/images/megamenu-image.jpg" alt="" />
+								</div>
+								<ul class="megamenu-items">
+									<li><a href="#">Delightful Queen-bedded Room</a></li>
+									<li><a href="#">Delightful King or Twin-bedded Room </a></li>
+									<li><a href="#">Deluxe King or Twin-bedded Room </a></li>
+									<li><a href="#">Splendid Rooms</a></li>
+									<li><a href="#">Most Splendid Rooms</a></li>
+								</ul>
+								<ul class="megamenu-items right">
+									<li><a href="#">Book a stay</a></li>
+									<li><a href="#">Make an enquiry</a></li>
+									<li class="megamenu-offers-link"><a href="#">See all our latest offers</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="our-rooms.html">Our Rooms</a>
+							<div class="megamenu cf">
+								<div class="megamenu-image">
+									<img src="/images/megamenu-image.jpg" alt="" />
+								</div>
+								<ul class="megamenu-items">
+									<li><a href="#">Delightful Queen-bedded Room</a></li>
+									<li><a href="#">Delightful King or Twin-bedded Room </a></li>
+									<li><a href="#">Deluxe King or Twin-bedded Room </a></li>
+									<li><a href="#">Splendid Rooms</a></li>
+									<li><a href="#">Most Splendid Rooms</a></li>
+								</ul>
+								<ul class="megamenu-items right">
+									<li><a href="#">Book a stay</a></li>
+									<li><a href="#">Make an enquiry</a></li>
+									<li class="megamenu-offers-link"><a href="#">See all our latest offers</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="location.html">Location</a>
+							<div class="megamenu cf">
+								<div class="megamenu-image">
+									<img src="/images/megamenu-image.jpg" alt="" />
+								</div>
+								<ul class="megamenu-items">
+									<li><a href="#">Delightful Queen-bedded Room</a></li>
+									<li><a href="#">Delightful King or Twin-bedded Room </a></li>
+									<li><a href="#">Deluxe King or Twin-bedded Room </a></li>
+									<li><a href="#">Splendid Rooms</a></li>
+									<li><a href="#">Most Splendid Rooms</a></li>
+								</ul>
+								<ul class="megamenu-items right">
+									<li><a href="#">Book a stay</a></li>
+									<li><a href="#">Make an enquiry</a></li>
+									<li class="megamenu-offers-link"><a href="#">See all our latest offers</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="dining.html">Dining</a>
+							<div class="megamenu cf">
+								<div class="megamenu-image">
+									<img src="/images/megamenu-image.jpg" alt="" />
+								</div>
+								<ul class="megamenu-items">
+									<li><a href="#">Delightful Queen-bedded Room</a></li>
+									<li><a href="#">Delightful King or Twin-bedded Room </a></li>
+									<li><a href="#">Deluxe King or Twin-bedded Room </a></li>
+									<li><a href="#">Splendid Rooms</a></li>
+									<li><a href="#">Most Splendid Rooms</a></li>
+								</ul>
+								<ul class="megamenu-items right">
+									<li><a href="#">Book a stay</a></li>
+									<li><a href="#">Make an enquiry</a></li>
+									<li class="megamenu-offers-link"><a href="#">See all our latest offers</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="events.html">Events</a>
+							<div class="megamenu cf">
+								<div class="megamenu-image">
+									<img src="/images/megamenu-image.jpg" alt="" />
+								</div>
+								<ul class="megamenu-items">
+									<li><a href="#">Delightful Queen-bedded Room</a></li>
+									<li><a href="#">Delightful King or Twin-bedded Room </a></li>
+									<li><a href="#">Deluxe King or Twin-bedded Room </a></li>
+									<li><a href="#">Splendid Rooms</a></li>
+									<li><a href="#">Most Splendid Rooms</a></li>
+								</ul>
+								<ul class="megamenu-items right">
+									<li><a href="#">Book a stay</a></li>
+									<li><a href="#">Make an enquiry</a></li>
+									<li class="megamenu-offers-link"><a href="#">See all our latest offers</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="conact-us.html">Contact Us</a>
+							<div class="megamenu cf">
+								<div class="megamenu-image">
+									<img src="/images/megamenu-image.jpg" alt="" />
+								</div>
+								<ul class="megamenu-items">
+									<li><a href="#">Delightful Queen-bedded Room</a></li>
+									<li><a href="#">Delightful King or Twin-bedded Room </a></li>
+									<li><a href="#">Deluxe King or Twin-bedded Room </a></li>
+									<li><a href="#">Splendid Rooms</a></li>
+									<li><a href="#">Most Splendid Rooms</a></li>
+								</ul>
+								<ul class="megamenu-items right">
+									<li><a href="#">Book a stay</a></li>
+									<li><a href="#">Make an enquiry</a></li>
+									<li class="megamenu-offers-link"><a href="#">See all our latest offers</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+				
+				<div id="check-avail">
+					
+					<a href="#" id="check-avail-toggle">Book <span>a</span> stay</a>
+					
+					<div id="check-avail-form">
+						
+						<form action="https://gc.synxis.com/rez.aspx" method="get" target="_blank">
+							<input type="hidden" name="Hotel" value="15601" />
+							<input type="hidden" name="Chain" value="6386" />
+							<input type="hidden" name="locale" value="en-gb" />
+							<input type="hidden" name="start" value="availresults" />
+							<input type="hidden" name="adult" value="2" />
+							
+							<input type="text" id="arrive" name="arrive" readonly="readonly" />
+							<input type="text" id="depart" name="depart" readonly="readonly" />
+							
+							<div class="check-avail-button">
+								<input type="submit" id="check-avail-submit" value="Check Availability" />
+							</div>
+							
+							<div class="check-avail-button">
+								<a href="#">Make an enquiry</a>
+							</div>
+							
+							<p>Call our team: +44 (0) 20 7396 90005</p>
+							
+						</form>
+						
+					</div>
+					
+				</div><!-- /#check-avail -->
+				
+			</div><!-- /#nav-container -->
+			
+			
+			
+		</div><!-- /#header -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<div class="main-slider flexslider cf">
+			<ul class="slides">
+							<li class="bottom-left">
+								<img src="/content-images/slider6.jpg" alt="" /> 
+								<div class="keyline"></div>
+										<div class="flex-caption">
+										<div class="main-caption">
+											<p class="flex-caption-header">Impeccably <em>English</em></p>
+											<p>Heritage and flawless five-star service combine in our sophisticated home from home</p>
+										</div>
+										</div>
+							
+							</li>
+							<li class="bottom-right">
+								<img src="/content-images/the-goring-gardens-headline.jpg" alt="" /> 
+								<div class="keyline"></div>
+										<div class="flex-caption">
+										<div class="main-caption">
+											<p class="flex-caption-header">An <em>urban</em> oasis <br />in the heart of London</p>
+											<p>Time well spent in The Goring Gardens </p>
+										</div>
+										</div>
+							
+							</li>
+							<li class="default">
+								<img src="/content-images/slider4.jpg" alt="" /> 
+								<div class="keyline"></div>
+										<div class="flex-caption">
+										<div class="main-caption">
+											<p class="flex-caption-header">The <em>Suite</em> Life</p>
+											<p>Oozing style and sophistication, the suites at The Goring are desirable to the most discerning of guests</p>
+										</div>
+										</div>
+							
+							</li>
+							<li class="top-left">
+								<img src="/content-images/slider9.jpg" alt="" /> 
+								<div class="keyline"></div>
+										<div class="flex-caption">
+										<div class="main-caption">
+											<p class="flex-caption-header"><span><span>Easter <em>fun</em>at The Goring</span></span></p>
+											<p>Enjoy an Easter family break at The Goring</p>
+										</div>
+										</div>
+							
+							</li>
+							<li class="default">
+								<img src="/content-images/slider10.jpg" alt="" /> 
+								<div class="keyline"></div>
+										<div class="flex-caption">
+										<div class="main-caption">
+											<p class="flex-caption-header"><span><span>We're <em>back</em></span></span></p>
+											<p>The Goring has entered a new era</p>
+										</div>
+										</div>
+							
+							</li>
+
+			</ul>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		<div id="home-content">
+			
+			
+			<div id="home-title">
+				<h1><span>Our Hotel <em>in</em> London&rsquo;s Belgravia</span></h1>
+			</div>
+			
+			
+			
+			<div class="home-content-panels cf">
+				
+				
+				
+				<div class="home-text">
+					<h2>OVER A CENTURY OF LUXURY SERVICE</h2>
+					<div class="divider"></div>
+					<p><em>A quintessentially English Luxury Hotel</em></p>
+					<p>Today, The Goring remains a favourite address and hidden gem for anyone seeking out that Quintessentially English Luxury Hotel in centre of London. </p>
+				</div>
+				
+				
+				
+				<div class="home-rollover">
+					<div class="home-rollover-image">
+						<img src="/content-images/home-panel-1.jpg" alt="" />
+						<div class="keyline"></div>
+					</div>
+					<div class="home-rollover-content">
+						<div class="home-offer">
+							<h2>Quintessential British Cuisine at The Goring</h2>
+							<div class="divider"></div>
+							<p>For over a century our food has played a pivotal role in establishing The Goring as one of London’s finest five star luxury hotels. </p>
+							<a href="#">Read more</a>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				<div class="home-rollover right">
+					<div class="home-rollover-image">
+						<img src="/content-images/home-panel-2.jpg" alt="" />
+						<div class="keyline"></div>
+					</div>
+					<div class="home-rollover-content">
+						<div class="home-offer">
+							<h2>Quintessential British Cuisine at The Goring</h2>
+							<div class="divider"></div>
+							<p>For over a century our food has played a pivotal role in establishing The Goring as one of London’s finest five star luxury hotels. </p>
+							<a href="#">Read more</a>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div><!-- /.home-content-panels -->
+			
+			
+			
+			
+			
+			<div class="home-content-panels second-row cf">
+				
+				<div class="home-offer">
+					<h2>Indulgent <br /><span>Weekends</span> <br /> <em>at The Goring</em></h2>
+					<div class="divider"></div>
+					<p>Plan ahead and enjoy reduced rates at <br />The Goring.</p>
+					<a href="#">From &pound;427 per night</a>
+				</div>
+				
+				
+				<div class="home-center-rollover">
+					<div class="home-rollover-image">
+						<img src="/content-images/home-panel-3.jpg" alt="" />
+						<div class="keyline"></div>
+					</div>
+					<div class="home-rollover-content">
+						<div class="home-offer">
+							<h2>Big John Recommends <br /><span>Top London Tips</span> <br /> <em>From London’s Top Concierge</em></h2>
+							<div class="divider"></div>
+							<p>This month John recommendations;<br />Harry Potter Tours<br />Lion King (the musical)...</p>
+							<a href="#">Read more</a>
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="home-offer right">
+					<h2>One Hundred Years <br /><span>One Family</span> <br /> <em>the History of the Goring</em></h2>
+					<div class="divider"></div>
+					<p>Discover more about our century of service.<br />&nbsp;</p>
+					<a href="#">READ MORE</a>
+				</div>
+				
+			</div><!-- /.home-content-panels -->
+			
+			
+		</div><!-- /#home-content -->
+		
+		
+		
+		
+		
+		
+				
+		
+		
+		<div id="footer">
+			@if (Umbraco.TypedContent(1069).Children.Any())
+   {
+			<div id="footer-left-nav">
+				<ul>
+                    @foreach (var link in Umbraco.TypedContent(1069).Children.OrderBy("sortOrder").Take(4))
+                    {
+                        if(link.DocumentTypeAlias == "Link")
+                        {
+					        <li><a href="@link.GetPropertyValue("Link")" @(link.GetPropertyValue("Target") == null ? null : "target="+link.GetPropertyValue("Target")+"")>@link.Name</a></li>
+                        }
+                    }
+				</ul>
+			</div>
+   }
+			
+			<div id="footer-icons">
+				<ul id="footer-icons-awards">
+					<li><img src="@CurrentPage.Site().imageOfTheLeftFooter" /></li>
+					<li><img src="@CurrentPage.Site().imageOfTheCenterFooter" /></li>
+					<li><img src="@CurrentPage.Site().imageOfTheRightFooter" /></li>
+				</ul>
+				@if(Umbraco.TypedContent(1068).Children.Any())
+    {
+				<ul id="footer-icons-social">
+                    @foreach (var social in Umbraco.TypedContent(1068).Children.OrderBy("sortOrder"))
+                    {
+                        if (social.DocumentTypeAlias == "Social")
+                        {
+					        <li><a target="_blank" href="@social.GetPropertyValue("Link")"><img src="@social.GetPropertyValue("Icon")" alt="@social.Name"/></a></li>
+                        }
+                    }
+				</ul>
+    }
+			</div>
+			
+            
+			@if (Umbraco.TypedContent(1069).Children.Any())
+   {
+			<div id="footer-right-nav">
+				<ul>
+                    @foreach (var link in Umbraco.TypedContent(1069).Children.Where(l=>l.SortOrder >= 4).OrderBy("sortOrder").Take(4))
+                    {
+                        if(link.DocumentTypeAlias == "Link")
+                        {
+					        <li><a href="@link.GetPropertyValue("Link")" @(link.GetPropertyValue("Target") == null ? null : "target="+link.GetPropertyValue("Target")+"")>@link.Name</a></li>
+                        }
+                    }
+				</ul>
+			</div>
+   }
+
+			
+		</div><!-- /#footer -->
+		
+		
+		<div id="footer-legal-nav">
+			<ul>
+				<li>@CurrentPage.Site().Copyright</li>
+				<li><a href="#">Site Map</a></li>
+				<li><a href="#">Legal &amp; Privacy</a></li>
+			</ul>
+		</div>
+		
+		
+	</div><!-- /#wrapper -->
+	
+
+
+@RenderBody()
+	
+	
+	
+	
+	
+</body>
+</html>

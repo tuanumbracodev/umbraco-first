@@ -1,0 +1,52 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using System.Web.Optimization
+
+@if (@Umbraco.Field("pageTitle").ToString() == "")
+{	<title>Default</title>	}
+else
+{	<title>@Umbraco.Field("pageTitle")</title>	}
+
+@if (@Umbraco.Field("metaDescription").ToString() == "")
+{	<meta name="description" content="" />	}
+else
+{	<meta name="description" content="@Umbraco.Field("metaDescription").ToString()" />	}
+
+@if (@Umbraco.Field("metaKeywords").ToString() == "")
+{	<meta name="keywords" content="" />	}
+else
+{	<meta name="keywords" content="@Umbraco.Field("metaKeywords").ToString()" />	}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/fc0512d1-33b6-4af8-9429-f4f97613ba26.css" />
+<script type="text/javascript">
+    WebFontConfig = { fontdeck: { id: '53720' } };
+
+    (function () {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+    })();
+	</script>
+
+@Styles.Render("~/bundles/css")
+@*<link rel="stylesheet" type="text/css" href="/css/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/flexslider.css" />
+<link rel="stylesheet" type="text/css" href="/css/goring.css" />*@
+
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+@Scripts.Render("~/bundles/scripts")
+@*<script src="/scripts/jquery-ui.min.js"></script>
+<script src="/scripts/jquery.flexslider-min.js"></script>
+<script src="/scripts/main.js"></script>*@
+
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({ publisher: "b312c3ab-1d18-489f-a6d3-1c083aed0c0f", doNotHash: false, doNotCopy: false, hashAddressBar: false });</script>
+
