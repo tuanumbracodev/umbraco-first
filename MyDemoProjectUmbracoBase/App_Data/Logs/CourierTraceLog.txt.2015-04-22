@@ -1,0 +1,5 @@
+﻿2015-03-29 17:33:06,274 [28] DEBUG Umbraco.Courier.Core.EventManager - [Thread 26] Unloading (count: 0)
+2015-03-29 17:33:06,345 [28] DEBUG Umbraco.Courier.Core.EventManager - [Thread 32] Unloading (count: 0)
+2015-03-29 17:33:24,208 [28] DEBUG Umbraco.Courier.Core.EventManager - [Thread 19] Unloading (count: 0)
+2015-03-29 17:33:25,664 [28] DEBUG Umbraco.Courier.Core.EventManager - [Thread 33] Unloading (count: 0)
+2015-03-29 17:34:03,621 [28] DEBUG Umbraco.Courier.Core.EventManager - [Thread 19] Unloading (count: 0)
